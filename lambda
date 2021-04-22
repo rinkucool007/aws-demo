@@ -1,0 +1,6 @@
+# Lambda Fun to Deploy into AWS using AWS CLI
+1. Zip the lambda file i.e. index.js
+2. Upload into S3
+	aws s3 cp image.zip s3://aws-s3-bucket/images/image.zip
+3. Update AWS lambda
+	aws lambda update-function-code --function-name resizeImages --s3-bucket images --s3-key image.zip --publish
